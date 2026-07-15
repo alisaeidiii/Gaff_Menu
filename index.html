@@ -1,98 +1,209 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>کافه گاف | منو</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کافه گاف | GAFF Cafe</title>
 
-<style>
-body{
-    font-family: Tahoma, sans-serif;
-    background:#f7f2ea;
-    margin:0;
-    padding:20px;
-    text-align:center;
-}
-.logo{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-}
-h1{
-    color:#4b2e1e;
-}
-.menu{
-    background:white;
-    border-radius:15px;
-    padding:20px;
-    margin:20px auto;
-    max-width:400px;
-    box-shadow:0 3px 10px #ccc;
-}
-.item{
-    display:flex;
-    justify-content:space-between;
-    padding:12px;
-    border-bottom:1px solid #ddd;
-    font-size:18px;
-}
-.price{
-    color:#8b4513;
-    font-weight:bold;
-}
-.footer{
-    margin-top:30px;
-    color:#777;
-}
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<img class="logo" src="logo.png">
-
-<h1>☕ کافه گاف</h1>
-<p>منوی آنلاین کافه</p>
-
-<div class="menu">
-
-<div class="item">
-<span>اسپرسو</span>
-<span class="price">۸۰ هزار</span>
+<div class="loader">
+    <div class="coffee"></div>
 </div>
 
-<div class="item">
-<span>کاپوچینو</span>
-<span class="price">۱۲۰ هزار</span>
+<header class="hero">
+
+<nav>
+
+<div class="logo">
+<img src="images/logo.png" alt="GAFF">
+<h2>GAFF CAFE</h2>
 </div>
 
-<div class="item">
-<span>لاته</span>
-<span class="price">۱۳۰ هزار</span>
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
 </div>
 
-<div class="item">
-<span>آمریکانو</span>
-<span class="price">۱۰۰ هزار</span>
-</div>
+</nav>
 
-<div class="item">
-<span>چیزکیک</span>
-<span class="price">۱۵۰ هزار</span>
-</div>
+<div class="hero-content">
 
-<div class="item">
-<span>پاستا</span>
-<span class="price">۲۵۰ هزار</span>
-</div>
+<h1>به کافه گاف خوش آمدید</h1>
+
+<p>
+طعم واقعی قهوه، نوشیدنی‌های خاص و دسرهای تازه
+</p>
+
+<a href="#menu" class="btn">
+مشاهده منو
+</a>
 
 </div>
 
-<div class="footer">
-به کافه گاف خوش آمدید ❤️
+</header>
+
+<section class="category">
+
+<button class="active" data-filter="all">
+همه
+</button>
+
+<button data-filter="coffee">
+قهوه
+</button>
+
+<button data-filter="cold">
+نوشیدنی سرد
+</button>
+
+<button data-filter="cake">
+دسر
+</button>
+
+<button data-filter="food">
+غذا
+</button>
+
+</section>
+
+<section id="menu" class="cards">
+
+<div class="card coffee">
+
+<img src="images/espresso.jpg">
+
+<div class="info">
+
+<h3>اسپرسو</h3>
+
+<p>
+قهوه اسپرسوی تازه با دانه عربیکا
+</p>
+
+<div class="bottom">
+
+<span>95,000 تومان</span>
+
+<label>پرفروش</label>
+
 </div>
+
+</div>
+
+</div>
+
+<div class="card coffee">
+
+<img src="images/latte.jpg">
+
+<div class="info">
+
+<h3>کافه لاته</h3>
+
+<p>
+اسپرسو همراه شیر بخار داده شده
+</p>
+
+<div class="bottom">
+
+<span>145,000 تومان</span>
+
+<label>جدید</label>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card cold">
+
+<img src="images/mojito.jpg">
+
+<div class="info">
+
+<h3>موهیتو</h3>
+
+<p>
+نعناع تازه، لیمو و یخ
+</p>
+
+<div class="bottom">
+
+<span>170,000 تومان</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card cake">
+
+<img src="images/cheesecake.jpg">
+
+<div class="info">
+
+<h3>چیزکیک</h3>
+
+<p>
+چیزکیک نیویورکی با سس توت فرنگی
+</p>
+
+<div class="bottom">
+
+<span>180,000 تومان</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card food">
+
+<img src="images/pasta.jpg">
+
+<div class="info">
+
+<h3>پاستا آلفردو</h3>
+
+<p>
+مرغ، قارچ و سس آلفردو
+</p>
+
+<div class="bottom">
+
+<span>295,000 تومان</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 GAFF CAFE
+</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

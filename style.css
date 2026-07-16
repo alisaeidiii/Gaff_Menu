@@ -121,3 +121,32 @@ footer{
 .search-box input::placeholder{
     color:#999;
 }
+.categories{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding:15px 0 25px;
+    scrollbar-width:none;
+}
+
+.categories::-webkit-scrollbar{
+    display:none;
+}
+
+.categories button{
+    border:none;
+    background:#222;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:.3s;
+}
+
+.categories button:hover,
+.categories .active{
+    background:#D4AF37;
+    color:#111;
+    font-weight:bold;
+}

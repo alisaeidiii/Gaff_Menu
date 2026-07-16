@@ -11,7 +11,7 @@ body{
     color:#fff;
 }
 
-.hero{
+.hero{background:url("assets/header.jpg") center/cover no-repeat;
     height:60vh;
     background:url("assets/header.jpg") center/cover;
     display:flex;

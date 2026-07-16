@@ -1,132 +1,51 @@
-// Loading Screen
-window.addEventListener("load", () => {
-    const loader = document.querySelector(".loader");
-
-    setTimeout(() => {
-        loader.style.display = "none";
-    }, 1800);
-});
-
-
-// دسته‌بندی منو
-const buttons = document.querySelectorAll(".category button");
+// نمایش نرم کارت‌ها هنگام اسکرول
 const cards = document.querySelectorAll(".card");
 
-buttons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        buttons.forEach(btn => btn.classList.remove("active"));
-
-        button.classList.add("active");
-
-        const filter = button.dataset.filter;
-
-        cards.forEach(card => {
-
-            if (filter === "all") {
-
-                card.style.display = "block";
-
-            } else if (card.classList.contains(filter)) {
-
-                card.style.display = "block";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    });
-
-});
-
-
-// انیمیشن هنگام اسکرول
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.style.opacity="1";
-            entry.target.style.transform="translateY(0)";
-
-        }
-
-    });
-
-},{
-    threshold:0.2
-});
-
-cards.forEach(card=>{
-
-    card.style.opacity="0";
-    card.style.transform="translateY(40px)";
-    card.style.transition=".6s";
-
-    observer.observe(card);
-
-});
-
-
-// اسکرول نرم دکمه منو
-document.querySelector(".btn").addEventListener("click",(e)=>{
-
-    e.preventDefault();
-
-    document.querySelector("#menu").scrollIntoView({
-
-        behavior:"smooth"
-
-    });
-
-});
-
-
-// کوچک شدن منو هنگام اسکرول
-window.addEventListener("scroll",()=>{
-
-    const nav=document.querySelector("nav");
-
-    if(window.scrollY>80){
-
-        nav.style.padding="12px 8%";
-        nav.style.background="rgba(0,0,0,.75)";
-
-    }else{
-
-        nav.style.padding="20px 8%";
-        nav.style.background="rgba(0,0,0,.2)";
-
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
     }
-
+  });
 });
 
-
-// افکت روی کارت‌ها
-cards.forEach(card=>{
-
-    card.addEventListener("mousemove",(e)=>{
-
-        const rect=card.getBoundingClientRect();
-
-        const x=e.clientX-rect.left;
-        const y=e.clientY-rect.top;
-
-        card.style.background=
-        `radial-gradient(circle at ${x}px ${y}px,#3b302a,#211b18)`;
-
-    });
-
-    card.addEventListener("mouseleave",()=>{
-
-        card.style.background="#211b18";
-
-    });
-
+cards.forEach(card => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(30px)";
+  card.style.transition = "0.6s ease";
+  observer.observe(card);
 });
+
+// دکمه بازگشت به بالا
+const btn = document.createElement("button");
+btn.innerHTML = "↑";
+btn.id = "topBtn";
+document.body.appendChild(btn);
+
+btn.style.cssText = `
+position:fixed;
+bottom:20px;
+left:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#D4AF37;
+color:#111;
+font-size:22px;
+cursor:pointer;
+display:none;
+box-shadow:0 5px 15px rgba(0,0,0,.4);
+`;
+
+window.addEventListener("scroll", () => {
+  btn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+btn.onclick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};

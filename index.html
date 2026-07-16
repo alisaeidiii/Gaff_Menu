@@ -1,193 +1,72 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>کافه گاف | GAFF Cafe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کافه گاف | قرار هر روز</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-  <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="loader">
-    <div class="coffee"></div>
-</div>
-
 <header class="hero">
 
-<nav>
+    <div class="overlay">
 
-<div class="logo">
-<img src="images/logo.png" alt="GAFF">
-<h2>GAFF CAFE</h2>
-</div>
+        <img src="assets/logo.png" class="logo" alt="گاف">
 
-<div class="menu-btn">
-<i class="fa-solid fa-bars"></i>
-</div>
+        <h1>کافه گاف</h1>
 
-</nav>
+        <p class="slogan">
+            گاف؛ قرار هر روز
+        </p>
 
-<div class="hero-content">
-
-<h1>به کافه گاف خوش آمدید</h1>
-
-<p>
-طعم واقعی قهوه، نوشیدنی‌های خاص و دسرهای تازه
-</p>
-
-<a href="#menu" class="btn">
-مشاهده منو
-</a>
-
-</div>
+    </div>
 
 </header>
 
-<section class="category">
+<section class="menu">
 
-<button class="active" data-filter="all">
-همه
-</button>
+<h2>☕ قهوه‌های گرم</h2>
 
-<button data-filter="coffee">
-قهوه
-</button>
+<div class="cards">
 
-<button data-filter="cold">
-نوشیدنی سرد
-</button>
+<div class="card">
 
-<button data-filter="cake">
-دسر
-</button>
-
-<button data-filter="food">
-غذا
-</button>
-
-</section>
-
-<section id="menu" class="cards">
-
-<div class="card coffee">
-
-<img src="images/espresso.jpg">
-
-<div class="info">
+<img src="assets/coffee/espresso.jpg">
 
 <h3>اسپرسو</h3>
 
-<p>
-قهوه اسپرسوی تازه با دانه عربیکا
-</p>
+<p>غلیظ و اصیل</p>
 
-<div class="bottom">
-
-<span>95,000 تومان</span>
-
-<label>پرفروش</label>
+<span>۹۵,۰۰۰ تومان</span>
 
 </div>
 
-</div>
+<div class="card">
+
+<img src="assets/coffee/latte.jpg">
+
+<h3>لاته</h3>
+
+<p>اسپرسو + شیر بخار داده شده</p>
+
+<span>۱۴۵,۰۰۰ تومان</span>
 
 </div>
 
-<div class="card coffee">
+<div class="card">
 
-<img src="images/latte.jpg">
+<img src="assets/coffee/cappuccino.jpg">
 
-<div class="info">
+<h3>کاپوچینو</h3>
 
-<h3>کافه لاته</h3>
+<p>کف شیر لطیف</p>
 
-<p>
-اسپرسو همراه شیر بخار داده شده
-</p>
-
-<div class="bottom">
-
-<span>145,000 تومان</span>
-
-<label>جدید</label>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card cold">
-
-<img src="images/mojito.jpg">
-
-<div class="info">
-
-<h3>موهیتو</h3>
-
-<p>
-نعناع تازه، لیمو و یخ
-</p>
-
-<div class="bottom">
-
-<span>170,000 تومان</span>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card cake">
-
-<img src="images/cheesecake.jpg">
-
-<div class="info">
-
-<h3>چیزکیک</h3>
-
-<p>
-چیزکیک نیویورکی با سس توت فرنگی
-</p>
-
-<div class="bottom">
-
-<span>180,000 تومان</span>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card food">
-
-<img src="images/pasta.jpg">
-
-<div class="info">
-
-<h3>پاستا آلفردو</h3>
-
-<p>
-مرغ، قارچ و سس آلفردو
-</p>
-
-<div class="bottom">
-
-<span>295,000 تومان</span>
-
-</div>
+<span>۱۴۰,۰۰۰ تومان</span>
 
 </div>
 
@@ -198,12 +77,11 @@
 <footer>
 
 <p>
-© 2026 GAFF CAFE
+© 2026
+کافه گاف
 </p>
 
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>

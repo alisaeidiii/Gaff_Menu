@@ -32,7 +32,10 @@ body{
 
 .logo{
     width:120px;
-    margin-bottom:20px;
+    height:120px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
 }
 
 h1{

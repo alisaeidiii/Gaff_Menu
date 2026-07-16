@@ -102,3 +102,22 @@ footer{
     color:#999;
     border-top:1px solid #333;
 }
+.search-box{
+    margin:30px auto;
+    max-width:500px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    outline:none;
+    background:#222;
+    color:#fff;
+    font-size:16px;
+}
+
+.search-box input::placeholder{
+    color:#999;
+}

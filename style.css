@@ -164,3 +164,43 @@ footer{
 .card{
     position:relative;
 }
+.featured{
+    padding:40px 20px;
+}
+
+.featured h2{
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+.featured-card{
+    background:#1c1c1c;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.featured-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.featured-text{
+    padding:20px;
+}
+
+.featured-text h3{
+    color:#D4AF37;
+    margin-bottom:10px;
+}
+
+.featured-text p{
+    color:#ccc;
+    margin-bottom:15px;
+}
+
+.featured-text span{
+    font-size:22px;
+    font-weight:bold;
+}
